@@ -21,6 +21,26 @@ class CuboidMakers {
     return formula;
   }
 }
+
+// Stretch Task:
+
+class CubeMaker extends CuboidMakers {
+  constructor(cubAttr) {
+    super(cubAttr);
+  }
+  cubeVolume() {
+    return this.length * this.width * this.height;
+  }
+
+  cubeSurface() {
+    const formula =
+      2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height);
+    return formula;
+  }
+}
 //I modified the name cuboid to cuboids to avoid error since it has already been declare in prototypes
 const cuboids = new CuboidMakers({
   length: 4,
